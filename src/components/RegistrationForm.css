@@ -1,0 +1,31 @@
+.row {
+    background-image: url('https://decathlon-yeyeweller.index.studio/static/images/pattern.png');
+    background-size: auto; /* Garde la taille originale de l'image */
+    background-repeat: repeat; /* Répète l'image à la fois horizontalement et verticalement */
+    background-color: #589CFF;
+}
+
+.left-section {
+    height: 100vh;
+    background-image: url('https://decathlon-yeyeweller.index.studio/static/images/pattern.png');
+  }
+  
+.right-section {
+    background-color: rgba(255, 255, 255, 0.929);
+}
+
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 1rem;
+    border-radius: 8px;
+    height: auto;
+    margin:1rem;
+  }
+  
+.btn {
+    background-color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+}

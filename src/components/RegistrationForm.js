@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './RegistrationForm.css';
+
 
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
@@ -30,31 +33,42 @@ const RegistrationForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>Prénom:</label>
-        <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required />
+    <div className="container-fluid h-100">
+    <div className="row h-100">
+      <div className="col-md-6 d-none d-md-block left-section">
       </div>
-      <div>
-        <label>Nom:</label>
-        <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required />
+
+      {/* Section droite avec le formulaire */}
+      <div className="col-md-6 d-flex justify-content-center align-items-center right-section">
+        <form onSubmit={handleSubmit} className="form-container">
+          <h2 className="mb-4">Formulaire d'inscription</h2>
+          <div className="mb-3">
+            <label htmlFor="firstName" className="form-label">Prénom:</label>
+            <input type="text" id="firstName" name="firstName" className="form-control" value={formData.firstName} onChange={handleChange} required />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="lastName" className="form-label">Nom:</label>
+            <input type="text" id="lastName" name="lastName" className="form-control" value={formData.lastName} onChange={handleChange} required />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="age" className="form-label">Âge:</label>
+            <input type="number" id="age" name="age" className="form-control" value={formData.age} onChange={handleChange} required />
+            {error && <p className="text-danger">{error}</p>}
+          </div>
+          <div className="mb-3">
+            <label htmlFor="email" className="form-label">Email:</label>
+            <input type="email" id="email" name="email" className="form-control" value={formData.email} onChange={handleChange} required />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="password" className="form-label">Mot de passe:</label>
+            <input type="password" id="password" name="password" className="form-control" value={formData.password} onChange={handleChange} required />
+          </div>
+          <button type="submit" className="btn btn-primary">S'inscrire</button>
+        </form>
       </div>
-      <div>
-        <label>Âge:</label>
-        <input type="number" name="age" value={formData.age} onChange={handleChange} required />
-        {error && <p style={{ color: 'red' }}>{error}</p>}
-      </div>
-      <div>
-        <label>Email:</label>
-        <input type="email" name="email" value={formData.email} onChange={handleChange} required />
-      </div>
-      <div>
-        <label>Mot de passe:</label>
-        <input type="password" name="password" value={formData.password} onChange={handleChange} required />
-      </div>
-      <button type="submit">S'inscrire</button>
-    </form>
-  );
+    </div>
+  </div>
+);
 };
 
 export default RegistrationForm;
