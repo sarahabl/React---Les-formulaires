@@ -38,7 +38,7 @@ const RegistrationForm = () => {
       <div className="col-md-6 d-none d-md-block left-section">
       </div>
 
-      {/* Section droite avec le formulaire */}
+      {/* Section avec le formulaire */}
       <div className="col-md-6 d-flex justify-content-center align-items-center right-section">
         <form onSubmit={handleSubmit} className="form-container">
           <h2 className="mb-4">Formulaire d'inscription</h2>
