@@ -43,15 +43,15 @@ const RegistrationForm = () => {
         <form onSubmit={handleSubmit} className="form-container">
           <h2 className="mb-4">Formulaire d'inscription</h2>
           <div className="mb-3">
-            <label htmlFor="firstName" className="form-label">Prénom:</label>
+            <label htmlFor="firstName" className="form-label">Prénom :</label>
             <input type="text" id="firstName" name="firstName" className="form-control" value={formData.firstName} onChange={handleChange} required />
           </div>
           <div className="mb-3">
-            <label htmlFor="lastName" className="form-label">Nom:</label>
+            <label htmlFor="lastName" className="form-label">Nom :</label>
             <input type="text" id="lastName" name="lastName" className="form-control" value={formData.lastName} onChange={handleChange} required />
           </div>
           <div className="mb-3">
-            <label htmlFor="age" className="form-label">Âge:</label>
+            <label htmlFor="age" className="form-label">Âge :</label>
             <input type="number" id="age" name="age" className="form-control" value={formData.age} onChange={handleChange} required />
             {error && <p className="text-danger">{error}</p>}
           </div>
@@ -60,7 +60,7 @@ const RegistrationForm = () => {
             <input type="email" id="email" name="email" className="form-control" value={formData.email} onChange={handleChange} required />
           </div>
           <div className="mb-3">
-            <label htmlFor="password" className="form-label">Mot de passe:</label>
+            <label htmlFor="password" className="form-label">Mot de passe :</label>
             <input type="password" id="password" name="password" className="form-control" value={formData.password} onChange={handleChange} required />
           </div>
           <button type="submit" className="btn btn-primary">S'inscrire</button>
